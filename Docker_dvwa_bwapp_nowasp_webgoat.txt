@@ -1,0 +1,107 @@
+목표
+- VirtualBox 설치
+- 칼리리눅스 설치
+
+- docker 설치
+
+[web-dvwa]
+
+1. sudo apt update
+
+2. sudo apt install docker.io
+
+3. sudo docker login
+
+4. sudo search web-dvwa
+
+5. sudo docker pull vulnerables/web-dvwa
+
+6. sudo docker run -p  81:80 vulnerables/web-dvwa
+
+
+<< 인터넷 연결 오류시  sudo service docker restart >>
+
+  localhost:81/login.php
+
+[bwapp]
+
+1. sudo search bwapp
+
+2. sudo docker pull raesene/bwapp
+
+3. sudo docker run -p  82:80 raesene/bwapp
+
+<< localhost:82/install.php >>
+
+
+[nowasp]
+
+1. sudo search nowasp
+
+2. sudo docker pull citizenstig/nowasp
+
+3. sudo docker run -p  83:80 citizenstig/nowasp
+
+<<  localhost:82 >>
+
+
+[webgoat-8.0]
+
+1. sudo search webgoat-8.0
+
+2. sudo docker pull webgoat/webgoat-8.0
+
+3. sudo docker run -p  8080 webgoat/webgoat-8.0
+
+
+
+
+2. sudo docker run -p 82:80 raesene/bwapp
+
+3. sudo docker run -p 83:80 citizenstig/nowasp
+
+4. sudo docker run -p 84:80 webgoat/webgoat-8.0
+
+http://localhost:8080/WebGoat/registration
+
+
+purpose
+
+
+[centOS]
+
+command 한번에 보기
+window powershell
+docker search centos
+docker pull centos
+docker images -a
+docker run --name centos-test --hostname centos-test -it -d centos
+
+
+centos bash
+[root@centos-test /]# yum update -y
+[root@centos-test /]# yum install ncurses wget vim net-tools -y
+[root@centos-test /]# yum list installed | grep -E "wget|ncurses|vim|net-tools"
+[root@centos-test /]# exit
+
+
+window powershell
+docker ps -a
+docker exec -it centos-test /bin/bash
+docker stop centos-test
+docker start centos-test
+docker exec -it centos-test /bin/bash
+
+
+centos bash
+[root@centos-test /]# exit
+
+
+window powershell
+docker commit container-test dailycode/centos_image
+
+  
+
+[NOTEBOOK  HASH TAG]
+
+'argon2:$argon2id$v=19$m=10240,t=10,p=8$B7MfawEGGaKsaKoPD4vPLA$n13Na4agSiQjSBf/TjUpYNJNgT+vq6mC/o1wW1Ov03w'
